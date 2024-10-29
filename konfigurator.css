@@ -1,0 +1,87 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    accent-color: #000000;
+}
+
+#lewa {
+    background-color: maroon;
+    color: white;
+    height: 700px;
+    width: 30%;
+    float: left;
+
+}
+
+#prawa {
+    background-color: maroon;
+    color: white;
+    height: 700px;
+    width: 70%;
+    float: left;
+    overflow: auto;
+}
+
+footer {
+    background-color: dimgray;
+    color: white;
+    width: 100%;
+    float: left;
+
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    float: left;
+}
+
+ul {
+    float: left;
+}
+
+#text {
+    float: right;
+}
+
+h2 {
+    margin: 10px;
+}
+
+p {
+    margin: 10px;
+    padding: 10px;
+}
+
+button, input, select {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+button {
+    width: 6vw;
+    height: 4vh;
+    transition-duration: .5s;
+}
+
+#radios {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 20px;
+}
+
+#indigo {
+    background-color: indigo;
+    color: aliceblue;
+}
+
+#steel {
+    background-color: SteelBlue;
+    color: black;
+}
+
+#olive {
+    background-color: Olive;
+}

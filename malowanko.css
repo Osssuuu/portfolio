@@ -1,0 +1,82 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#baner {
+    background-color: rgb(89, 150, 165);
+    height: 100px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lewy {
+    background-color: lightblue;
+    color: #000000;
+    height: 800px;
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+#srodek {
+    background-color: rgb(143, 228, 243);
+    color: #000000;
+    height: 800px;
+    width: 60%;
+    float: left;
+    text-align: center;
+    
+}
+#oferta {
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+}
+#prawy {
+    background-color: lightblue;
+    color: #000000;
+    height: 800px;
+    width: 20%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stopka {
+    background-color: rgb(89, 150, 165);
+    color: #FFFFFF;
+    height: 100px;
+    clear: both;
+    text-align: center;
+}
+
+#obraz {
+    width: 90%;
+    border-radius: 15px;
+}
+
+table {
+    border: solid;
+    border-collapse: collapse;  
+    border-radius: 5px;
+    border-style: hidden;
+    box-shadow: 0 0 0 3px black;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+tr,td,th {
+    border: solid;
+    border-radius: 5px;
+    text-align: center;
+    border-collapse: collapse;
+    
+}
+td:hover, th:hover {
+    background-color: steelblue;
+    color: white;
+    border-color: black;
+}

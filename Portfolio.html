@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+<nav>
+    <a href="#ja">O Mnie</a>
+    <a href="#projekty">Projekty</a>
+    <a href="#umiejet">Umiejętności</a>
+</nav>
+
+<main>
+    <h1>Bartosz Nowak</h1>
+
+    <section id="ja">
+        <h2>O Mnie</h2>
+        <p>Jestem programistą specjalizującym się w tworzeniu stron internetowych i aplikacji webowych. Moja pasja to minimalizm w designie oraz efektywne, nowoczesne technologie, które dostarczają wyjątkowych doświadczeń użytkownika.</p>
+    </section>
+
+    <section id="projekty">
+        <h2>Projekty</h2>
+        <p>Przykładowe projekty, które zrealizowałem:</p>
+        <ul>
+            <li><a href="konfigurator.html">Projekt 1: Witryna konfiguracyjna "Gibraltar"</a></li>
+            <li><a href="malowanko_odpalanko.html">Projekt 2: Strona dla firmy malarskiej</a></li>
+        </ul>
+    </section>
+    
+    <section id="umiejet">
+        <h2>Umiejętności</h2>
+        <p>Posiadam doświadczenie w następujących technologiach:</p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
+</main>
+
+<button id="askButton" onclick="showContactForm()">Zadaj pytanie</button>
+
+<div id="contactForm">
+    <span id="closeForm" onclick="hideContactForm()">Zamknij</span>
+    <h3 id="formularz">Formularz kontaktowy</h3>
+    <form onsubmit="submitForm(event)">
+        <label for="name">Imię:</label>
+        <input type="text" id="name" required placeholder="Podaj swoje imię" oninvalid="this.setCustomValidity('Podaj swoję imię')"oninput="this.setCustomValidity('')"/>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required placeholder="Podaj adres email"oninvalid="this.setCustomValidity('Podaj swój adres e-mail')"oninput="this.setCustomValidity('')"/>
+        <label for="message">Wiadomość:</label>
+        <textarea id="message" rows="4" required placeholder="Wpisz swoją wiadomość....." oninvalid="this.setCustomValidity('Zadaj swoje pytanie')"oninput="this.setCustomValidity('')"></textarea>
+        <br>
+        <button type="submit" id="wyslij">Wyślij zgłoszenie</button>
+
+        <h4 id="dzieki">&copy; 2024 Bartosz Nowak. Wszystkie prawa zastrzeżone</h4>
+
+    </form>
+</div>
+
+<div id="thankYouMessage">
+    <p>Dziękuję za wysłanie zgłoszenia!<br> Odezwę się jak najszybciej!</p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Bartosz Nowak. Wszystkie prawa zastrzeżone.</p>
+    <p>Skontaktuj się: <a href="email:bnbiznesv1@gmail.com">bnbiznesv1@gmail.com</a></p>
+</footer>
+
+<script>
+    function showContactForm() {
+        document.getElementById("contactForm").style.display = "block";
+    }
+
+    function hideContactForm() {
+        document.getElementById("contactForm").style.display = "none";
+    }
+
+    function submitForm(event) {
+        event.preventDefault(); 
+        document.getElementById("contactForm").style.display = "none"; 
+        
+        const thankYouMessage = document.getElementById("thankYouMessage");
+        thankYouMessage.style.display = "block"; 
+        thankYouMessage.style.animation = "fadeIn 1s ease-in"; 
+
+        setTimeout(function() {
+            thankYouMessage.style.animation = "fadeOut 1s ease-out"; 
+        }, 2000);
+
+        setTimeout(function() {
+            thankYouMessage.style.display = "none";
+        }, 3000);
+    }
+</script>
+
+</body>
+</html>

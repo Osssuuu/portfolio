@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gibraltar</title>
+    <link rel="stylesheet" href="konfigurator.css">
+    <script>
+        function change_background(clr) {
+            document.getElementById("prawa").style.backgroundColor = clr;
+        }
+
+        function font_color() {
+            document.getElementById("prawa").style.color = document.getElementById("font_color").value;
+        }
+
+        function font_size() {
+            document.getElementById("prawa").style.fontSize = document.getElementById("text_size").value;
+        }
+
+        function border_width() {
+            if (document.getElementById("border").checked) {
+                document.getElementById("img").style.border = "1px solid #FFFFFF";
+            } else {
+                document.getElementById("img").style.border = "none";
+            }
+        }
+
+        function radio() {
+            if (document.getElementById("disc").checked) {
+                document.getElementById("elements").style.listStyle = "disc";
+            } else if (document.getElementById("square").checked) {
+                document.getElementById("elements").style.listStyle = "square";
+            } else {
+                document.getElementById("elements").style.listStyle = "circle"
+            }
+        }
+        function sepia() {
+           if ( document.getElementById("sepia").checked) {
+            document.getElementById("img").style.filter = "sepia(1)";
+            }
+            else {
+                document.getElementById("img").style.filter = "sepia(0)";
+            }
+        }
+    </script>
+</head>
+<body>
+    <section id="lewa">
+
+        <h2>Konfigurator Stylu</h2>
+
+        <p>
+            Podaj kolor tła <br>
+
+            <button id="indigo" onclick="change_background('indigo')">Indigo</button>
+            <button id="steel" onclick="change_background('steelblue')">SteelBlue</button>
+            <button id="olive" onclick="change_background('olive')">Olive</button>
+        </p>
+
+        <p>
+            Podaj kolor czcionki <br>
+
+            <select name="font_color" id="font_color" onclick="font_color()">
+                <option value="white">White</option>
+                <option value="tan">Tan</option>
+                <option value="bisque">Biseks</option>
+                <option value="plum">Plum</option>
+            </select>
+        </p>
+
+        <p>
+            Podaj rozmiar czcionki w procentach np.200% <br>
+
+            <input type="text" id="text_size" value="100%" onblur="font_size()">
+        </p>
+
+        <p>
+            Czy rysunek ma mieć ramkę <br>
+
+            <input type="checkbox" name="border" id="border" checked onclick="border_width()">Rysuj Ramkę
+        </p>
+
+        <p>
+            Jaki jest typ punktora listy?
+
+            <div id="radios">
+                <label><input type="radio" name="list_type" id="disc" onclick="radio()" checked>dysk</label>
+                <label><input type="radio" name="list_type" id="square" onclick="radio()">kwadrat</label>
+                <label><input type="radio" name="list_type" id="circle" onclick="radio()">okrąg</label>
+            </div>
+        </p>
+        <p>
+            Czy ustawic sepię dla obrazka <input type="checkbox" name="sepia" id="sepia" onclick="sepia()">
+        </p>
+
+    </section>
+
+    <section id="prawa">
+        <img src="giblartar.jpg" alt="gibraltar" id="img">
+        <ul id="elements">
+            <li>Gibraltar leży na południu Hiszpanii, ale jest brytyjski.</li>
+            <li>Charakterystyczną formacją jest Skała Gibraltarska, widoczna z daleka./li>
+            <li>Znajdziesz tam dzikie magoty – jedyne wolno żyjące małpy w Europie./li>
+        </ul>
+    </section>
+
+    <footer id="stopka">
+        Autor: Bartosz Nowak
+    </footer>
+</body>
+</html>
